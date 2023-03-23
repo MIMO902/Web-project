@@ -42,28 +42,42 @@ function validate() {
   let phin = document.forms.contactForm.cphone.value;
   let emailin = document.forms.contactForm.cmail.value;
   let mesin = document.forms.contactForm.cmes.value;
-  //window.alert(mesin);
-  let namev = false;
-  let phv = false;
-  let emailv = false;
-  let mesv = false;
+  //window.alert('s'+mesin+'m');
 
-  if (namein != "") {
+  if (namein == "") {
+   document.getElementById("label1").style.visibility = 'visible';
+  }
+  else{
+   document.getElementById("label1").style.visibility = 'hidden';
+  }
+  if (phin == "") {
+   document.getElementById("label2").style.visibility = 'visible';
+  }
+  else{
+   document.getElementById("label2").style.visibility = 'hidden';
+  }
+  if (emailin == "") {
+   document.getElementById("label3").style.visibility = 'visible';
+  }
+  else{
+   document.getElementById("label3").style.visibility = 'hidden';
+  }
+  if (mesin == "") {
 
-    namev = true;
+   document.getElementById("label5").style.visibility = 'visible';
   }
-  if (phin != "") {
-    phv = true;
+  else{
+   document.getElementById("label5").style.visibility = 'hidden';
   }
-  if (emailin != "") {
-    emailv = true;
+  if(phin.length!=11 && phin.length!=""){
+   document.getElementById("label6").style.visibility = 'visible';
   }
-  if (mesin !== "") {
-    mesv = true;
+  else{
+   document.getElementById("label6").style.visibility = 'hidden';
   }
 
-  if (namev === false || phv === false || emailv === false || mesv === false) {
-   window.alert("Please enter your name properly.");
-    c.preventDefault();
-  }
+ if(namein == ""||phin == ""||emailin == ""||mesin == ""||phin.length!=11){
+   return false;
+ }
+ 
 }
