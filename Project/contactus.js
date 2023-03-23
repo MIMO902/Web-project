@@ -17,9 +17,9 @@
 //         return '';
 // }
 // function validateDOB(field){
-//     let dob = new Date(field);  
+//     let dob = new Date(field);
 //     let diff_ms = Date.now() - dob.getTime();
-//     let age_dt = new Date(diff_ms); 
+//     let age_dt = new Date(diff_ms);
 //     if( Math.abs(age_dt.getUTCFullYear() - 1970)>=18)
 //         return '';
 //     else
@@ -37,35 +37,33 @@
 //         return false;
 //     }
 // }
-let namein=document.querySelector("[name='cname']");
-let phin=document.querySelector("[name='cphone']");
-let emailin=document.querySelector("[name='cmail']");
-let mesin=document.querySelector("[name='cmes']");
+function validate() {
+  let namein = document.forms.contactForm.cname.value;
+  let phin = document.forms.contactForm.cphone.value;
+  let emailin = document.forms.contactForm.cmail.value;
+  let mesin = document.forms.contactForm.cmes.value;
+  //window.alert(mesin);
+  let namev = false;
+  let phv = false;
+  let emailv = false;
+  let mesv = false;
 
+  if (namein != "") {
 
+    namev = true;
+  }
+  if (phin != "") {
+    phv = true;
+  }
+  if (emailin != "") {
+    emailv = true;
+  }
+  if (mesin !== "") {
+    mesv = true;
+  }
 
-document.forms[0].onsubmit=function(c){
-let namev=false;
-let phv=false;
-let emailv=false;
-let mesv=false;
- 
-if(namein.value !==""){
-   namev=true;
-}
-if(phin.value !==""){
-    phv=true;
- }
- if(emailin.value !==""){
-    emailv=true;
- }
- if(mesin.value !==""){
-    mesv=true;
- }
-
-
-if(namev===false || phv===false || emailv=== false || mesv===false){
+  if (namev === false || phv === false || emailv === false || mesv === false) {
+   window.alert("Please enter your name properly.");
     c.preventDefault();
-}
-
+  }
 }

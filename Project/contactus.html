@@ -27,23 +27,23 @@
     <div class="cleft">
         <h3> Tell us what you need</h3>
         <div id="notv"> </div>       
- <form>
+ <form name="contactForm" onsubmit="return validate()">
     <!--action method="post" onsubmit="return validate('this')" -->
     <div class="input-row">
 
 <div class="input-group">
 <label for="cname">Name </label>
-    <input type="text" name="cname" id="cname" placeholder="Enter your name" required >  <!-- required is not necessary 34an na 3amla validation bel js -->
+    <input type="text" name="cname" id="cname" placeholder="Enter your name"  >  <!-- required is not necessary 34an na 3amla validation bel js -->
 </div>
 <div class="input-group">
 <label for="cphone" > Phone number </label>
-    <input type="tel"  name="cphone" id="cphone" placeholder="Enter your cell phone number" required>
+    <input type="tel"  name="cphone" id="cphone" placeholder="Enter your cell phone number" >
 </div>
     </div>
     <div class="input-row">
 <div class="input-group">
 <label for="cmail" >E-mail</label>
-    <input type="email" placeholder="Enter your E-mail" name="cmail" id="cmail" required>
+    <input type="email" placeholder="Enter your E-mail" name="cmail" id="cmail" >
 </div>
 <div class="input-group">
 <label for="cloc" >Location</label>
@@ -51,7 +51,7 @@
 </div> 
 </div>
 <label for="cmes" >Message</label>
-    <textarea  id="cmes" placeholder="Leave your message" style="height:100px" rows="10" required> </textarea>
+    <textarea  id="cmes" placeholder="Leave your message" style="height:100px" rows="10" > </textarea>
    <button type="submit"> SEND </button>
     
    <!-- 
